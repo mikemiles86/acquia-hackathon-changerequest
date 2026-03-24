@@ -2,9 +2,10 @@
 
 ## Submission metadata
 
-- Submission type: `TODO: GitHub Issue or Pull Request`
+- Submission type: `GitHub Issue`
 - Team name: `TODO: add team name (optional)`
 - On-site DrupalCon team lead (required for prize eligibility): `TODO: name / GitHub handle`
+- Submission repository: `https://github.com/mikemiles86/acquia-hackathon-changerequest`
 
 ## Short summary
 
