@@ -1,0 +1,18 @@
+# Dependencies
+/vendor/
+
+# DDEV local/generated artifacts
+.tmp/
+.ddev/.importdb/
+.ddev/.downloads/
+.ddev/.global_commands/
+
+# Drupal writable/runtime files
+web/sites/default/files/
+web/sites/default/settings.php
+web/sites/default/settings.local.php
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/

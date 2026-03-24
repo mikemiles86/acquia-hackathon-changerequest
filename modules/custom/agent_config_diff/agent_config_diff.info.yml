@@ -1,0 +1,14 @@
+name: 'Agent Config Diff'
+type: module
+description: 'Safely turns natural-language change requests into reviewable staged configuration diffs.'
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
+  - drupal:field_ui
+  - drupal:text
+  - drupal:options
+  - drupal:taxonomy
+  - drupal:user
+  - drupal:system
+  - drupal:views

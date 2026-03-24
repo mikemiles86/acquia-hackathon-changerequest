@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * Install and update hooks for Agent Config Diff.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function agent_config_diff_schema(): array {
+  $schema['agent_config_diff_run'] = [
+    'description' => 'Stores Agent Config Diff execution history.',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary ID.',
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'uid' => [
+        'description' => 'User ID who ran the request.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'created' => [
+        'description' => 'Unix timestamp when run was saved.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'raw_request' => [
+        'description' => 'Raw natural-language request.',
+        'type' => 'text',
+        'size' => 'big',
+        'not null' => TRUE,
+      ],
+      'normalized_request' => [
+        'description' => 'Normalized request text.',
+        'type' => 'text',
+        'size' => 'big',
+        'not null' => TRUE,
+      ],
+      'plan_json' => [
+        'description' => 'Serialized change plan JSON.',
+        'type' => 'text',
+        'size' => 'big',
+        'not null' => TRUE,
+      ],
+      'risk_json' => [
+        'description' => 'Serialized risk analysis JSON.',
+        'type' => 'text',
+        'size' => 'big',
+        'not null' => TRUE,
+      ],
+      'status' => [
+        'description' => 'Run status string.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => 'planned',
+      ],
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'created' => ['created'],
+      'uid' => ['uid'],
+      'status' => ['status'],
+    ],
+  ];
+
+  return $schema;
+}

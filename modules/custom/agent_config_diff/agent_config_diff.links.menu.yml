@@ -1,0 +1,13 @@
+agent_config_diff.request_form:
+  title: 'Agent Config Diff'
+  description: 'Generate reviewable staged config diffs from natural-language requests.'
+  route_name: agent_config_diff.request_form
+  parent: system.admin_config_development
+  weight: 10
+
+agent_config_diff.run_history:
+  title: 'Run history'
+  description: 'Review historical Agent Config Diff runs.'
+  route_name: agent_config_diff.run_history
+  parent: agent_config_diff.request_form
+  weight: 11

@@ -1,0 +1,15 @@
+agent_config_diff.request_form:
+  path: '/admin/config/development/agent-config-diff'
+  defaults:
+    _title: 'Agent Config Diff'
+    _form: '\Drupal\agent_config_diff\Form\ChangeRequestForm'
+  requirements:
+    _permission: 'use agent config diff'
+
+agent_config_diff.run_history:
+  path: '/admin/config/development/agent-config-diff/history'
+  defaults:
+    _title: 'Agent Config Diff Run History'
+    _controller: '\Drupal\agent_config_diff\Controller\RunHistoryController::history'
+  requirements:
+    _permission: 'view agent config diff history'

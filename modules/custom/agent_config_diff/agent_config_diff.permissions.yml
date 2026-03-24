@@ -1,0 +1,8 @@
+use agent config diff:
+  title: 'Use Agent Config Diff'
+  description: 'Submit natural-language change requests and review staged config diffs.'
+  restrict access: true
+view agent config diff history:
+  title: 'View Agent Config Diff run history'
+  description: 'View historical runs and parsed plans for Agent Config Diff.'
+  restrict access: true

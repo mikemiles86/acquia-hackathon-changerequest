@@ -1,0 +1,43 @@
+services:
+  agent_config_diff.site_topology_inspector:
+    class: Drupal\agent_config_diff\Service\SiteTopologyInspector
+    arguments:
+      - '@entity_type.bundle.info'
+      - '@entity_type.manager'
+      - '@entity_field.manager'
+      - '@entity_display.repository'
+
+  agent_config_diff.request_normalizer:
+    class: Drupal\agent_config_diff\Service\RequestNormalizer
+
+  agent_config_diff.supported_intent_parser:
+    class: Drupal\agent_config_diff\Service\SupportedIntentParser
+    arguments:
+      - '@agent_config_diff.request_normalizer'
+      - '@agent_config_diff.site_topology_inspector'
+
+  agent_config_diff.risk_analyzer:
+    class: Drupal\agent_config_diff\Service\RiskAnalyzer
+
+  agent_config_diff.change_plan_builder:
+    class: Drupal\agent_config_diff\Service\ChangePlanBuilder
+    arguments:
+      - '@agent_config_diff.site_topology_inspector'
+      - '@agent_config_diff.risk_analyzer'
+
+  agent_config_diff.staged_config_builder:
+    class: Drupal\agent_config_diff\Service\StagedConfigBuilder
+    arguments:
+      - '@config.factory'
+
+  agent_config_diff.diff_renderer:
+    class: Drupal\agent_config_diff\Service\DiffRenderer
+
+  agent_config_diff.export_artifact_builder:
+    class: Drupal\agent_config_diff\Service\ExportArtifactBuilder
+
+  agent_config_diff.run_history_repository:
+    class: Drupal\agent_config_diff\Service\RunHistoryRepository
+    arguments:
+      - '@database'
+      - '@datetime.time'
