@@ -3,8 +3,8 @@
 ## Submission metadata
 
 - Submission type: `GitHub Issue`
-- Team name: `TODO: add team name (optional)`
-- On-site DrupalCon team lead (required for prize eligibility): `TODO: name / GitHub handle`
+- Team name: `Mike Miles`
+- On-site DrupalCon team lead (required for prize eligibility): `@mikemiles86`
 - Submission repository: `https://github.com/mikemiles86/acquia-hackathon-changerequest`
 
 ## Short summary
@@ -103,7 +103,7 @@ Use these requests:
 - [x] README included
 - [x] Agent Run Log included
 - [x] Agent Experience Report included
-- [ ] On-site team lead name/GitHub handle filled
+- [x] On-site team lead name/GitHub handle filled
 
 ## Final submission note
 
