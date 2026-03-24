@@ -1,6 +1,25 @@
 # Dependencies
 /vendor/
 
+# Drupal scaffold/core (regenerated via Composer)
+web/core/
+web/modules/
+web/profiles/
+web/themes/
+web/sites/
+web/autoload.php
+web/index.php
+web/INSTALL.txt
+web/README.md
+web/robots.txt
+web/update.php
+web/.csslintrc
+web/.eslintignore
+web/.eslintrc.json
+web/.ht.router.php
+web/.htaccess
+web/example.gitignore
+
 # DDEV local/generated artifacts
 .tmp/
 .ddev/.importdb/
