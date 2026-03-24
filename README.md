@@ -1,4 +1,4 @@
-# Drupal 11 Change Request → Reviewable Config Diff
+# Drupal 11 Reviewable Config Diff
 
 ## What we built
 
